@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Seu Nome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #bbb 1px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .main-content {
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        .contact-info p, .skills ul, .education ul, .experience ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .skills ul, .education ul, .experience ul {
+            margin-left: 20px;
+        }
+        .skills li, .education li, .experience li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            border-top: #bbb 1px solid;
+        }
+        .skills-content {
+            display: none;
+        }
+        .skills-toggle {
+            cursor: pointer;
+            color: #007BFF;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Seu Nome</h1>
+            <p>Seu Cargo ou Profissão</p>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <div class="section contact-info">
+            <h2>Informações de Contato</h2>
+            <p>Email: seuemail@exemplo.com</p>
+            <p>Telefone: (00) 12345-6789</p>
+            <p>LinkedIn: linkedin.com/in/seuperfil</p>
+            <p>GitHub: github.com/seuperfil</p>
+        </div>
+
+        <div class="section skills">
+            <h2>Habilidades <span class="skills-toggle" onclick="toggleSkills()">[Mostrar]</span></h2>
+            <div class="skills-content">
+                <ul>
+                    <li>Desenvolvimento Web (HTML, CSS, JavaScript)</li>
+                    <li>Programação em Python</li>
+                    <li>Gerenciamento de Projetos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section education">
+            <h2>Educação</h2>
+            <ul>
+                <li><strong>Nome da Universidade</strong> - Curso de Graduação em Nome do Curso (Ano de Conclusão)</li>
+                <li><strong>Nome do Curso Técnico</strong> - Nome da Instituição (Ano de Conclusão)</li>
+            </ul>
+        </div>
+
+        <div class="section experience">
+            <h2>Experiência Profissional</h2>
+            <ul>
+                <li><strong>Nome da Empresa</strong> - Cargo (Ano de Início - Ano de Fim)
+                    <ul>
+                        <li>Responsabilidade ou Realização 1</li>
+                        <li>Responsabilidade ou Realização 2</li>
+                    </ul>
+                </li>
+                <li><strong>Nome da Empresa Anterior</strong> - Cargo (Ano de Início - Ano de Fim)
+                    <ul>
+                        <li>Responsabilidade ou Realização 1</li>
+                        <li>Responsabilidade ou Realização 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleSkills() {
+            const skillsContent = document.querySelector('.skills-content');
+            const skillsToggle = document.querySelector('.skills-toggle');
+
+            if (skillsContent.style.display === 'none' || skillsContent.style.display === '') {
+                skillsContent.style.display = 'block';
+                skillsToggle.textContent = '[Ocultar]';
+            } else {
+                skillsContent.style.display = 'none';
+                skillsToggle.textContent = '[Mostrar]';
+            }
+        }
+    </script>
+</body>
+</html>
